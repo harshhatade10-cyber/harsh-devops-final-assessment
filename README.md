@@ -1,18 +1,17 @@
-# DevOps Intern Final Assessment
-
-**Name:** Harsh Pralhad Hatade
-**Date:** 04-06-2026
+# DevOps Foundations Project
 
 ## Project Description
 
-This project demonstrates fundamental DevOps concepts including Git & GitHub, Linux Shell Scripting, Docker, GitHub Actions (CI/CD), Nomad job deployment, and Grafana Loki documentation.
+This project was built to practice core DevOps concepts and tools used in modern software delivery pipelines. It demonstrates version control, Linux automation, containerization, CI/CD pipelines, workload orchestration, and log monitoring using industry-standard DevOps tools.
+
+The project includes Git & GitHub for source code management, Bash scripting for automation, Docker for containerization, GitHub Actions for continuous integration, Nomad for workload deployment, and Grafana Loki for log management and monitoring.
 
 ---
 
 ## Project Structure
 
 ```text
-harsh-devops-final-assessment
+devops-foundations-project
 │
 ├── README.md
 ├── hello.py
@@ -34,23 +33,23 @@ harsh-devops-final-assessment
 
 ---
 
-## Step 1: Git & GitHub
+## Git & GitHub
 
-Repository initialized using Git and pushed to GitHub.
+The repository is managed using Git and hosted on GitHub to enable version control and collaboration.
 
-Sample Python file:
+### Sample Application
 
 ```python
 print("Hello, DevOps!")
 ```
 
-Run:
+### Run Application
 
 ```bash
 python hello.py
 ```
 
-Expected Output:
+### Expected Output
 
 ```text
 Hello, DevOps!
@@ -58,21 +57,23 @@ Hello, DevOps!
 
 ---
 
-## Step 2: Linux Shell Script
+## Linux Shell Scripting
 
-File:
+The project includes a Bash script that collects basic system information.
+
+### File
 
 ```text
 scripts/sysinfo.sh
 ```
 
-This script displays:
+### Features
 
-* Current User
-* Current Date
-* Disk Usage
+- Displays current user
+- Displays current date and time
+- Displays disk usage information
 
-Run:
+### Run Script
 
 ```bash
 chmod +x scripts/sysinfo.sh
@@ -81,23 +82,23 @@ chmod +x scripts/sysinfo.sh
 
 ---
 
-## Step 3: Docker
+## Docker Containerization
 
-Dockerfile containerizes the Python application.
+The Python application is containerized using Docker.
 
-Build Image:
+### Build Docker Image
 
 ```bash
 docker build -t hello-devops .
 ```
 
-Run Container:
+### Run Container
 
 ```bash
 docker run hello-devops
 ```
 
-Expected Output:
+### Expected Output
 
 ```text
 Hello, DevOps!
@@ -105,63 +106,71 @@ Hello, DevOps!
 
 ---
 
-## Step 4: CI/CD with GitHub Actions
+## CI/CD with GitHub Actions
 
-Workflow File:
+A GitHub Actions workflow is configured to automate code validation.
+
+### Workflow File
 
 ```text
 .github/workflows/ci.yml
 ```
 
-The workflow automatically runs:
+### Pipeline Activities
 
-```bash
-python hello.py
-```
-
-on every push to the repository.
+- Triggered on every push
+- Executes the Python application
+- Verifies successful execution
 
 ---
 
-## Step 5: Nomad Deployment
+## Nomad Deployment
 
-Nomad Job File:
+Nomad is used to deploy and manage the Docker workload.
+
+### Job File
 
 ```text
 nomad/hello.nomad
 ```
 
-Run:
+### Run Deployment
 
 ```bash
 nomad job run nomad/hello.nomad
 ```
 
-The job deploys the Docker container using Nomad.
+### Purpose
+
+- Simple workload scheduling
+- Container deployment management
+- Basic orchestration practice
 
 ---
 
-## Step 6: Monitoring with Grafana Loki
+## Monitoring with Grafana Loki
 
-Documentation File:
+Grafana Loki documentation and setup steps are included for log aggregation and monitoring.
+
+### Documentation File
 
 ```text
 monitoring/loki_setup.txt
 ```
 
-Example Commands:
+### Start Loki
 
 ```bash
 docker run -d -p 3100:3100 grafana/loki:3.0.0
 ```
 
-Check Status:
+### Health Check
 
 ```text
 http://localhost:3100/ready
 ```
 
-View Logs:
+### View Container Logs
 
 ```bash
 docker logs <container_id>
@@ -169,19 +178,63 @@ docker logs <container_id>
 
 ---
 
-## Technologies Used
+## Workflow
 
-* Git
-* GitHub
-* Linux
-* Bash Scripting
-* Docker
-* GitHub Actions
-* Nomad
-* Grafana Loki
+```text
+Developer
+    ↓
+GitHub Repository
+    ↓
+GitHub Actions CI/CD
+    ↓
+Docker Image Build
+    ↓
+Nomad Deployment
+    ↓
+Grafana Loki Monitoring
+```
 
 ---
 
-## Assessment Completion
+## Skills Demonstrated
 
-All required files, configurations, and documentation have been included as requested in the DevOps Intern Final Assessment.
+- Git and GitHub Version Control
+- Linux Administration Fundamentals
+- Bash Scripting and Automation
+- Docker Containerization
+- CI/CD Automation with GitHub Actions
+- Nomad Workload Scheduling
+- Log Management with Grafana Loki
+- DevOps Workflow Understanding
+
+---
+
+## Technologies Used
+
+| Category | Technology |
+|-----------|------------|
+| Version Control | Git, GitHub |
+| Operating System | Linux |
+| Scripting | Bash |
+| Programming Language | Python |
+| Containerization | Docker |
+| CI/CD | GitHub Actions |
+| Orchestration | Nomad |
+| Monitoring | Grafana Loki |
+
+---
+
+## Future Enhancements
+
+- Kubernetes Deployment
+- Terraform Infrastructure Provisioning
+- AWS Cloud Deployment
+- Prometheus Monitoring Integration
+- Automated Docker Image Publishing
+- Multi-Environment CI/CD Pipelines
+
+---
+
+## Conclusion
+
+This project serves as a practical implementation of foundational DevOps concepts and demonstrates hands-on experience with modern tools used for automation, deployment, orchestration, and monitoring in software delivery workflows.
